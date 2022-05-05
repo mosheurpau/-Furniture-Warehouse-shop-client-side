@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "AFRIQUE XL SLIP COVER 2 SEATER COUCH",
+        "price": "365",
+        "quantity": "10",
+        "supplier": "Mosheur Rahman",
+        "description": "Cosy, relaxed, plush, snug all the things you will find in the Afrique Slipcover couch.",
+        "img": "https://i.ibb.co/MVK9Q4h/item1.webp"
+    },
+    {
+        "id": 2,
+        "name": "SLEIGH DOUBLE BED ",
+        "price": "600",
+        "quantity": "15",
+        "supplier": "Mehedi Hasan",
+        "description": "Unique, Modern and Stylish. You need not look any further for a bed to fit into your bedroom. At Furniture Warehouse we are all about options and Local quality furniture.",
+        "img": "https://i.ibb.co/g35qwwL/item2.webp"
+    },
+    {
+        "id": 3,
+        "name": "PREMIER SINGLE RECLINER",
+        "price": "150",
+        "quantity": "10",
+        "supplier": "Mosheur Rahman",
+        "description": "Our Premier range is our most versatile range. Multiple Configurations and Upholstery options are available to suite any size room. At Furniture Warehouse we are all about options and Local quality furniture.",
+        "img": "https://i.ibb.co/YkpyTR6/item3.webp"
+    },
+    {
+        "id": 4,
+        "name": "ERGO FLEX 300 OFFICE CHAIR",
+        "price": "375",
+        "quantity": "20",
+        "supplier": "Mehedi Hasan",
+        "description": "The Ergo Flex office chair has an upholstered seat and back with an adjustable back-rake. It also comes with gas adjustable height.",
+        "img": "https://i.ibb.co/Y8ntSyF/item4.webp"
+    },
+    {
+        "id": 5,
+        "name": "CINDY SLEIGH DOUBLE BED",
+        "price": "580",
+        "quantity": "5",
+        "supplier": "Mosheur Rahman",
+        "description": "Another top seller. The Cindy is a classic and timeless range. At Furniture Warehouse we are all about options and Local quality furniture. Our units comes in a variety of material options and a variety of stains, sizes and colours.",
+        "img": "https://i.ibb.co/kcVVPwd/item5.webp"
+    },
+    {
+        "id": 6,
+        "name": "CLASSIC XL WINGBACK 2 SEATER",
+        "price": "910",
+        "quantity": "10",
+        "supplier": "Mosheur Rahman",
+        "description": "As its name suggests but still a timeless piece none theless. At Furniture Warehouse we are all about options and Local quality furniture.",
+        "img": "https://i.ibb.co/3NNW4M9/item6.webp"
+    }
+]
