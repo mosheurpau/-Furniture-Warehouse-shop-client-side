@@ -9,6 +9,7 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
+import ItemDetail from "./Pages/ItemDetail/ItemDetail";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
 
 function App() {
@@ -19,6 +20,10 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/items" element={<Items></Items>}></Route>
+        <Route
+          path="/items/:itemId"
+          element={<ItemDetail></ItemDetail>}
+        ></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/manage" element={<ManageItems></ManageItems>}></Route>
         <Route path="/addItem" element={<AddItem></AddItem>}></Route>
