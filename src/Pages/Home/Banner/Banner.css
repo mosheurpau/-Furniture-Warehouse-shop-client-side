@@ -1,11 +1,11 @@
 .banner-style {
-  background-image: url("https://i.ibb.co/Xb93dRm/banner-fur1.png");
-  background-size: cover;
+  /* background-image: url("https://i.ibb.co/Xb93dRm/banner-fur1.png"); */
+  /* background-size: cover; */
   height: 100vh;
   padding: 90px 0 50px 0;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   color: white;
-  background-color: burlywood;
+  background-color: #f7f2ed;
   margin-bottom: 100px;
 }
 .banner-title {
@@ -13,10 +13,30 @@
   padding-bottom: 10px;
   font-size: 50px;
   font-weight: 700;
+  color: #3e516a;
+}
+.banner-detail {
+  color: #8a8b9a;
+}
+.banner-btn {
+  padding: 7px 15px;
+  background-color: transparent;
+  border: 2px solid #3e516a;
+  color: #3e516a;
+  font-size: 1.125rem;
+}
+.banner-btn:hover {
+  background-color: black;
+  color: white;
 }
 @media only screen and (max-width: 600px) {
   .banner-style {
     padding: 10px 0 5px 0;
     color: white;
+  }
+  .banner-title {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    font-size: 30px;
   }
 }

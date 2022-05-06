@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import "./Banner.css";
 
 const Banner = () => {
@@ -7,20 +7,23 @@ const Banner = () => {
     <div className="banner-style">
       <Container fluid="md">
         <Row>
-          <Col md={12} className="my-auto text-center">
+          <Col md={6} className="my-auto text-start">
             <h1 className="mt-5 banner-title">
               Furniture that comforts the eyes
             </h1>
-            <h5 className="mt-5">
+            <h5 className="mt-5 banner-detail mb-5">
               Ut lobortis, ex vitae lobortis cursus, elit nisi facilisis urna,
               at porttitor eros leo ac ex. Nunc molestie turpis varius purus
               accumsan maximus. Nam ut libero aliquet.
             </h5>
-            <Button variant="primary" size="lg" className="fw-bold mt-5">
-              <a className="text-decoration-none text-white" href="#">
-                Shop Collection
-              </a>
-            </Button>
+            <button className="banner-btn">Shop Collection →</button>
+          </Col>
+          <Col md={6} className="my-auto text-center">
+            <img
+              className="img-fluid"
+              src="https://i.ibb.co/xmk8K1R/banner-furniture.png"
+              alt=""
+            />
           </Col>
         </Row>
       </Container>

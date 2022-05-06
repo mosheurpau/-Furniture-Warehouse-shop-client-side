@@ -17,7 +17,7 @@ const Header = () => {
             className="d-inline-block align-center nav-logo"
           />{" "}
           <b className="logo-title">
-            <span className="text-warning">Furniture</span> Warehouse
+            <span style={{ color: "#EB7700" }}>Furniture</span> Warehouse
           </b>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
