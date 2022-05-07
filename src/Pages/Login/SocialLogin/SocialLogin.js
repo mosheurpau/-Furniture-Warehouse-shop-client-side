@@ -44,7 +44,7 @@ const SocialLogin = () => {
   return (
     <Container>
       <Row className="justify-content-md-center">
-        <Col xs="10" lg="5" className="mx-auto  bg-light rounded-bottom pb-5">
+        <Col xs="12" lg="5" className="mx-auto  bg-light rounded-bottom pb-5">
           <div className="d-flex align-items-center">
             <div style={{ height: "1px" }} className="bg-primary w-50"></div>
             <p className="mt-2 px-2">or</p>

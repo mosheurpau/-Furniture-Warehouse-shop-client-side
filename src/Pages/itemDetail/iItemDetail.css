@@ -1,0 +1,31 @@
+.update-input {
+  color: black;
+  outline-color: #eb7700;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+
+.update-btn {
+  padding: 3px 15px;
+  background-color: white;
+  color: #eb7700;
+  border: 2px solid #eb7700;
+  border-radius: 5px;
+}
+.update-btn:hover {
+  background-color: #eb7700;
+  color: white;
+}
+.delivered-btn {
+  margin-top: 10px;
+  background-color: #eb7700;
+  border: 2px solid #eb7700;
+  color: white;
+  border-radius: 5px;
+  padding: 3px 15px;
+  margin-bottom: 20px;
+}
+.delivered-btn:hover {
+  color: #eb7700;
+  background-color: white;
+}

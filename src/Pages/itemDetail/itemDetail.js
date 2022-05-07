@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import "./iItemDetail.css";
 
@@ -33,10 +33,20 @@ const ItemDetail = () => {
             <h5>Quantity: {quantity}</h5>
             <h5>Supplier: {supplier}</h5>
             <p>{description}</p>
+            <div>
+              <input
+                className="me-2 update-input"
+                type="text"
+                name=""
+                id=""
+                placeholder="Enter quantity"
+              />
+              <button className="update-btn">Update Quantity</button>
+            </div>
+            <button className="delivered-btn">Delivered</button> <br />
           </div>
         </Col>
       </Row>
-      <button className="btn btn-primary">Proceed Checkout</button>
     </Container>
   );
 };

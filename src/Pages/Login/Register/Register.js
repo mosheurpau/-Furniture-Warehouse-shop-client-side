@@ -100,7 +100,7 @@ const Register = () => {
             </Form.Group>
 
             <Button
-              variant="primary"
+              style={{ backgroundColor: "#EB7700" }}
               type="submit"
               disabled={!agree}
               className="w-100"

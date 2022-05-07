@@ -62,7 +62,7 @@ const Login = () => {
   return (
     <Container>
       <Row className="justify-content-md-center">
-        <Col xs="10" lg="5" className="mt-3 mx-auto bg-light rounded-top px-5">
+        <Col xs="12" lg="5" className="mt-3 mx-auto bg-light rounded-top px-5">
           <h2 className="text-center my-3">Please Login</h2>
           <Form onSubmit={handleLogin} className="mb-3">
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -85,7 +85,11 @@ const Login = () => {
                 required
               />
             </Form.Group>
-            <Button variant="primary" type="submit" className="w-100">
+            <Button
+              style={{ backgroundColor: "#EB7700" }}
+              type="submit"
+              className="w-100"
+            >
               Login
             </Button>
           </Form>
