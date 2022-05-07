@@ -1,10 +1,18 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { signOut } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import auth from "../../../firebase.init";
 import { Link } from "react-router-dom";
 import CustomLink from "../../CustomLink/CustomLink";
 import "./Header.css";
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+
+  const handleSignOut = () => {
+    signOut(auth);
+  };
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -23,7 +31,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="text-center">
           <Nav className="ms-auto">
-            <Nav.Link as={CustomLink} to="/home"></Nav.Link>
+            <Nav.Link as={CustomLink} to="/home">
+              Home
+            </Nav.Link>
             <Nav.Link as={CustomLink} to="/items">
               Inventory Item
             </Nav.Link>
@@ -36,8 +46,20 @@ const Header = () => {
             <Nav.Link as={CustomLink} to="/blogs">
               Blogs
             </Nav.Link>
-            <Nav.Link as={CustomLink} to="/login">
-              Login
+            <Nav.Link>
+              {user ? (
+                <Button
+                  onClick={handleSignOut}
+                  variant="link"
+                  className="text-decoration-none"
+                >
+                  <b>Log Out</b>
+                </Button>
+              ) : (
+                <Nav.Link className="my-auto" as={CustomLink} to="/login">
+                  Login
+                </Nav.Link>
+              )}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
