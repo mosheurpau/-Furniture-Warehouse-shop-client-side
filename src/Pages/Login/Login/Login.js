@@ -10,6 +10,7 @@ import Loading from "../../Shared/Loading/Loading";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { async } from "@firebase/util";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -111,6 +112,7 @@ const Login = () => {
           </p>
           <ToastContainer />
         </Col>
+        <SocialLogin></SocialLogin>
       </Row>
     </Container>
   );

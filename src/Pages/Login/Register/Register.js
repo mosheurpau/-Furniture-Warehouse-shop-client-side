@@ -8,6 +8,7 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
   const [agree, setAgree] = useState(false);
@@ -120,6 +121,7 @@ const Register = () => {
           </p>
         </Col>
       </Row>
+      <SocialLogin></SocialLogin>
     </Container>
   );
 };
