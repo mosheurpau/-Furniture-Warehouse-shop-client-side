@@ -42,36 +42,36 @@ const AddItem = () => {
             onSubmit={handleSubmit(onSubmit)}
           >
             <input
-              className="mb-2"
+              className="mb-2 item-input"
               placeholder="Name"
               type="text"
               {...register("name", { required: true, maxLength: 50 })}
             />
             <textarea
-              className="mb-2"
+              className="mb-2 item-input"
               placeholder="Description"
               {...register("description")}
             />
             <input
-              className="mb-2"
+              className="mb-2 item-input"
               placeholder="Price"
               type="number"
               {...register("price")}
             />
             <input
-              className="mb-2"
+              className="mb-2 item-input"
               placeholder="quantity"
               type="number"
               {...register("quantity")}
             />
             <input
-              className="mb-2"
+              className="mb-2 item-input"
               placeholder="supplier"
               type="text"
               {...register("supplier")}
             />
             <input
-              className="mb-2"
+              className="mb-2 item-input"
               placeholder="Photo URL"
               type="text"
               {...register("img")}

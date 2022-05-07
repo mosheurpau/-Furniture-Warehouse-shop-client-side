@@ -1,0 +1,12 @@
+.delete-btn {
+  border-radius: 15px;
+}
+.delete-icon {
+  color: black;
+}
+.delete-icon:hover {
+  color: red;
+}
+.delete-btn:hover {
+  border: 2px solid red;
+}
