@@ -16,7 +16,12 @@ const Item = ({ item }) => {
       <h2 className="pt-3">{name}</h2>
       <h3>price ${price}</h3>
       <p>{description}</p>
-      <Button onClick={() => navigateToItemDetail(_id)}>Stock Update</Button>
+      <Button
+        style={{ backgroundColor: "#EB7700" }}
+        onClick={() => navigateToItemDetail(_id)}
+      >
+        Stock Update
+      </Button>
     </Col>
   );
 };

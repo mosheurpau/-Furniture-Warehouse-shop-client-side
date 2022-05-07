@@ -14,7 +14,7 @@ const Header = () => {
     signOut(auth);
   };
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="dark">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img
@@ -52,6 +52,7 @@ const Header = () => {
                   onClick={handleSignOut}
                   variant="link"
                   className="text-decoration-none"
+                  style={{ color: "#EB7700" }}
                 >
                   <b>Log Out</b>
                 </Button>

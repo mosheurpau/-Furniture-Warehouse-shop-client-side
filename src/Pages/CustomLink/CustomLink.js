@@ -12,9 +12,9 @@ function CustomLink({ children, to, ...props }) {
           paddingBottom: "0px",
           margin: "10px",
           textTransform: "uppercase",
-          color: match ? "#0D6EFD" : "white",
+          color: match ? "#EB7700" : "black",
           textDecoration: "none",
-          borderBottom: match ? "2px solid #0D6EFD" : "none",
+          borderBottom: match ? "2px solid #EB7700" : "none",
         }}
         to={to}
         {...props}
