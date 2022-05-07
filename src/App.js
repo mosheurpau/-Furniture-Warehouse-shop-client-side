@@ -11,6 +11,7 @@ import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import ItemDetail from "./Pages/ItemDetail/ItemDetail";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
+import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
 
 function App() {
   return (
@@ -22,11 +23,29 @@ function App() {
         <Route path="/items" element={<Items></Items>}></Route>
         <Route
           path="/items/:itemId"
-          element={<ItemDetail></ItemDetail>}
+          element={
+            <RequireAuth>
+              <ItemDetail></ItemDetail>
+            </RequireAuth>
+          }
         ></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
-        <Route path="/manage" element={<ManageItems></ManageItems>}></Route>
-        <Route path="/addItem" element={<AddItem></AddItem>}></Route>
+        <Route
+          path="/manage"
+          element={
+            <RequireAuth>
+              <ManageItems></ManageItems>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/addItem"
+          element={
+            <RequireAuth>
+              <AddItem></AddItem>
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
