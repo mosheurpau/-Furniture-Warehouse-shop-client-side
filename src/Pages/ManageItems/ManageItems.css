@@ -10,3 +10,11 @@
 .delete-btn:hover {
   border: 2px solid red;
 }
+.btn-update {
+  border-radius: 5px;
+}
+.btn-update:hover {
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+}

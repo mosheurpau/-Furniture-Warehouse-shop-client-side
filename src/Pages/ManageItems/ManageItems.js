@@ -4,7 +4,7 @@ import useItemAll from "../../hooks/useItemAll";
 import "./ManageItems.css";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const ManageItems = () => {
   const [items, setItems] = useItemAll();
 
@@ -23,6 +23,12 @@ const ManageItems = () => {
         });
     }
   };
+
+  const navigate = useNavigate();
+  const navigateToItemDetail = (_id) => {
+    navigate(`/items/${_id}`);
+  };
+
   return (
     <Container>
       <div className="w-100 mx-auto">
@@ -46,7 +52,12 @@ const ManageItems = () => {
                 <td> {item.price}</td>
                 <td> {item.quantity}</td>
                 <td>
-                  <button>Update</button>
+                  <button
+                    className="btn-update"
+                    onClick={() => navigateToItemDetail(item._id)}
+                  >
+                    Update
+                  </button>
                 </td>
                 <td>
                   <button
