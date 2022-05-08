@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import "./iItemDetail.css";
 
 const ItemDetail = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const { itemId } = useParams();
   const [items, setItems] = useState([]);
   useEffect(() => {
@@ -13,6 +16,38 @@ const ItemDetail = () => {
   }, [itemId]);
   console.log(itemId);
   const { name, img, description, price, quantity, supplier } = items;
+
+  let priviourQuan = parseInt(quantity);
+  // console.log(typeof priviourQuan);
+
+  const handleUpdateQuantity = (event) => {
+    event.preventDefault();
+
+    const newQuantity = event.target.quantity.value;
+
+    const quantity = priviourQuan + parseInt(newQuantity);
+
+    const updatedQuantity = { quantity };
+
+    // send data to the server
+    const url = `https://stark-sea-67117.herokuapp.com/item/${itemId}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedQuantity),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("success", data);
+        toast("Quantity added successfully!!!");
+        event.target.reset();
+        let from = location.state?.from?.pathname || "/manage";
+        navigate(from, { replace: true });
+      });
+  };
+
   return (
     <Container fluid="md">
       <Row className="justify-content-md-center">
@@ -34,14 +69,31 @@ const ItemDetail = () => {
             <h5>Supplier: {supplier}</h5>
             <p>{description}</p>
             <div>
-              <input
-                className="me-2 update-input"
-                type="text"
-                name=""
-                id=""
-                placeholder="Enter quantity"
-              />
-              <button className="update-btn">Update Quantity</button>
+              {/* <form onSubmit={handleUpdateQuantity}>
+                <input
+                  className="me-2 update-input"
+                  type="text"
+                  name="quantity"
+                  id=""
+                  placeholder="Enter quantity"
+                />
+                <input type="submit" value="Update Quantity" />
+              </form> */}
+
+              <form onSubmit={handleUpdateQuantity}>
+                <input
+                  className="me-2 update-input"
+                  placeholder="Enter quantity"
+                  type="text"
+                  name="quantity"
+                  required
+                />
+                <input
+                  className="update-btn"
+                  type="submit"
+                  value="Update Quantity"
+                />
+              </form>
             </div>
             <button className="delivered-btn">Delivered</button> <br />
           </div>

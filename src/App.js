@@ -12,6 +12,7 @@ import Register from "./Pages/Login/Register/Register";
 import ItemDetail from "./Pages/ItemDetail/ItemDetail";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
 import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }
