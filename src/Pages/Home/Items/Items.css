@@ -1,0 +1,12 @@
+.all-item {
+  text-decoration: none;
+  color: black;
+}
+.all-item:hover {
+  color: "#EB7700";
+}
+
+.all-item-btn {
+  border-radius: 5px;
+  padding: 5px 15px;
+}

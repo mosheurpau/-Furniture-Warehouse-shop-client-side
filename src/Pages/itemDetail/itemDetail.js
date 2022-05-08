@@ -30,6 +30,7 @@ const ItemDetail = () => {
     const updatedQuantity = { quantity };
 
     // send data to the server
+
     const url = `https://stark-sea-67117.herokuapp.com/item/${itemId}`;
     fetch(url, {
       method: "PUT",
@@ -69,17 +70,6 @@ const ItemDetail = () => {
             <h5>Supplier: {supplier}</h5>
             <p>{description}</p>
             <div>
-              {/* <form onSubmit={handleUpdateQuantity}>
-                <input
-                  className="me-2 update-input"
-                  type="text"
-                  name="quantity"
-                  id=""
-                  placeholder="Enter quantity"
-                />
-                <input type="submit" value="Update Quantity" />
-              </form> */}
-
               <form onSubmit={handleUpdateQuantity}>
                 <input
                   className="me-2 update-input"
@@ -95,7 +85,7 @@ const ItemDetail = () => {
                 />
               </form>
             </div>
-            <button className="delivered-btn">Delivered</button> <br />
+            <input className="update-btn" type="submit" value="Delivered" />
           </div>
         </Col>
       </Row>
