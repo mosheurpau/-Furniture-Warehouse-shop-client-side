@@ -19,7 +19,7 @@ const News = () => {
         <Row className="justify-content-md-center mb-5 pb-5">
           <Col md={6} lg={4}>
             <img
-              width={400}
+              width={300}
               height={300}
               src="https://i.ibb.co/cyKbqTK/blog-1.jpg"
               alt=""
@@ -45,7 +45,7 @@ const News = () => {
           </Col>
           <Col md={6} lg={4}>
             <img
-              width={400}
+              width={300}
               height={300}
               src="https://i.ibb.co/zVY2bbt/blog-2.jpg"
               alt=""
@@ -71,7 +71,7 @@ const News = () => {
           </Col>
           <Col md={6} lg={4}>
             <img
-              width={400}
+              width={300}
               height={300}
               src="https://i.ibb.co/NWPtzjt/blog-3.jpg"
               alt=""
