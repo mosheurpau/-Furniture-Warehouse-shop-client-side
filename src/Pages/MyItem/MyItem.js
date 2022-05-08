@@ -1,13 +1,12 @@
-import React from "react";
-import { Container, Table } from "react-bootstrap";
-import useItemAll from "../../hooks/useItemAll";
-import "./ManageItems.css";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect, useState } from "react";
+import { Container, Table } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-const ManageItems = () => {
-  const [items, setItems] = useItemAll();
+import auth from "../../firebase.init";
 
+const MyItem = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
@@ -24,6 +23,15 @@ const ManageItems = () => {
     }
   };
 
+  const [user] = useAuthState(auth);
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:5000/items/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setItems(data));
+  }, [user]);
+  console.log(items);
+
   const navigate = useNavigate();
   const navigateToItemDetail = (_id) => {
     navigate(`/items/${_id}`);
@@ -31,8 +39,8 @@ const ManageItems = () => {
 
   return (
     <Container>
-      <div className="w-100 mx-auto">
-        <h2 className="my-5">Manage All Items</h2>
+      <div className="w-100 mx-auto mb-5">
+        <h2 className="my-5">Manage My Items</h2>
         <Table striped bordered responsive hover variant="light">
           <thead>
             <tr>
@@ -76,4 +84,4 @@ const ManageItems = () => {
   );
 };
 
-export default ManageItems;
+export default MyItem;

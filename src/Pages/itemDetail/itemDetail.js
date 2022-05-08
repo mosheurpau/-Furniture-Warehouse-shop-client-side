@@ -49,6 +49,27 @@ const ItemDetail = () => {
       });
   };
 
+  const handleDeliveredQuantity = () => {
+    const newItem = { ...items };
+    newItem.quantity = newItem.quantity - 1;
+    console.log(newItem);
+    setItems(newItem);
+
+    const url = `https://stark-sea-67117.herokuapp.com/item/${itemId}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(items),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("success", data);
+        toast("Delivered successfully!!!");
+      });
+  };
+
   return (
     <Container fluid="md">
       <Row className="justify-content-md-center">
@@ -85,7 +106,12 @@ const ItemDetail = () => {
                 />
               </form>
             </div>
-            <input className="update-btn" type="submit" value="Delivered" />
+            <input
+              onClick={handleDeliveredQuantity}
+              className="update-btn"
+              type="submit"
+              value="Delivered"
+            />
           </div>
         </Col>
       </Row>

@@ -1,16 +1,20 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
 import "./AddItem.css";
 
 const AddItem = () => {
+  const [user] = useAuthState(auth);
+  console.log(user.email);
   const { register, handleSubmit } = useForm();
 
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    console.log(data);
+    data.email = user.email;
     const url = `https://stark-sea-67117.herokuapp.com/item`;
     fetch(url, {
       method: "POST",
