@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# Furniture warehouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live web site Link: [Furniture warehouse ](https://furniture-warehouse-shop.web.app/).
 
-## Available Scripts
+- This project has been made for warehouse management.
+- This projects data load from database mongodb and server heroku and react firebase.
+- This projects also use react router node, express.
+- react bootstrap framework using this project.
+- This projects also use 404 route and faveicon.
 
-In the project directory, you can run:
+## Description
+
+Here the user can add as many items as he wants and delete the items. He can increase the quantity and reduce it.
 
 ### `npm start`
 
