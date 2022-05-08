@@ -26,7 +26,7 @@ const MyItem = () => {
   const [user] = useAuthState(auth);
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/items/${user.email}`)
+    fetch(`https://stark-sea-67117.herokuapp.com/items/${user.email}`)
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, [user]);
