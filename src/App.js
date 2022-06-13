@@ -14,6 +14,7 @@ import NotFound from "./Pages/Shared/NotFound/NotFound";
 import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
 import { ToastContainer } from "react-toastify";
 import MyItem from "./Pages/MyItem/MyItem";
+import Inventory from "./Pages/Home/Inventory/Inventory";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/items" element={<Items></Items>}></Route>
+        <Route path="/inventory" element={<Inventory></Inventory>}></Route>
         <Route
           path="/items/:itemId"
           element={

@@ -1,12 +1,19 @@
+.all-item-btn {
+  padding: 5px 15px;
+  background-color: black;
+  border: 2px solid #3e516a;
+  font-size: 1.125rem;
+  color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.all-item-btn:hover {
+  background-color: #3e516a;
+  color: white;
+}
 .all-item {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .all-item:hover {
-  color: "#EB7700";
-}
-
-.all-item-btn {
-  border-radius: 5px;
-  padding: 5px 15px;
+  color: white;
 }

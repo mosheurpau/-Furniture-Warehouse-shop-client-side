@@ -1,16 +1,12 @@
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import Loading from "../../Shared/Loading/Loading";
 import Item from "../Item/Item";
-import "./Items.css";
 
-const Items = () => {
+const Inventory = () => {
   const [items, setItems, isLoading] = useState([]);
   useEffect(() => {
-    fetch("https://stark-sea-67117.herokuapp.com/item")
+    fetch("https://stark-sea-67117.herokuapp.com/itemAll")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
@@ -20,10 +16,10 @@ const Items = () => {
   }
 
   return (
-    <Container fluid="md">
+    <Container fluid="md" className="my-5">
       <Row className="justify-content-md-center">
         <Col lg="8">
-          <h1 className="text-center mb-5">Furniture Items</h1>
+          <h1 className="text-center mt-2">Furniture Items</h1>
         </Col>
       </Row>
       <Row className="justify-content-md-center">
@@ -31,16 +27,8 @@ const Items = () => {
           <Item key={item._id} item={item}></Item>
         ))}
       </Row>
-      <div className="mb-5">
-        <button className="all-item-btn mt-5">
-          <Link className="all-item" to="/manage">
-            Manage All Items{" "}
-            <FontAwesomeIcon className="" icon={faArrowRight} />
-          </Link>
-        </button>
-      </div>
     </Container>
   );
 };
 
-export default Items;
+export default Inventory;

@@ -54,7 +54,6 @@ const ItemDetail = () => {
     newItem.quantity = newItem.quantity - 1;
     console.log(newItem);
     setItems(newItem);
-
     const url = `https://stark-sea-67117.herokuapp.com/item/${itemId}`;
     fetch(url, {
       method: "PUT",
@@ -66,7 +65,7 @@ const ItemDetail = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log("success", data);
-        toast("Delivered successfully!!!");
+        alert("Task successfully!!!");
       });
   };
 

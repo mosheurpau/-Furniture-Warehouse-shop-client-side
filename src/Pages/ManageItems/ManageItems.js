@@ -5,8 +5,9 @@ import "./ManageItems.css";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
+import Loading from "../Shared/Loading/Loading";
 const ManageItems = () => {
-  const [items, setItems] = useItemAll();
+  const [items, setItems, isLoading] = useItemAll();
 
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
@@ -28,6 +29,10 @@ const ManageItems = () => {
   const navigateToItemDetail = (_id) => {
     navigate(`/items/${_id}`);
   };
+
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
 
   return (
     <Container>
