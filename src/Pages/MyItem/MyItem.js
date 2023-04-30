@@ -10,7 +10,7 @@ const MyItem = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `https://stark-sea-67117.herokuapp.com/itemAll/${id}`;
+      const url = `http://localhost:5000/itemAll/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -26,7 +26,7 @@ const MyItem = () => {
   const [user] = useAuthState(auth);
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch(`https://stark-sea-67117.herokuapp.com/items/${user.email}`)
+    fetch(`http://localhost:5000/items/${user.email}`)
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, [user]);

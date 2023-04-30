@@ -10,7 +10,7 @@ import "./Items.css";
 const Items = () => {
   const [items, setItems, isLoading] = useState([]);
   useEffect(() => {
-    fetch("https://stark-sea-67117.herokuapp.com/item")
+    fetch("http://localhost:5000/item")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
@@ -33,7 +33,7 @@ const Items = () => {
       </Row>
       <div className="mb-5">
         <button className="all-item-btn mt-5">
-          <Link className="all-item" to="/manage">
+          <Link className="all-item" to="/inventory">
             Manage All Items{" "}
             <FontAwesomeIcon className="" icon={faArrowRight} />
           </Link>

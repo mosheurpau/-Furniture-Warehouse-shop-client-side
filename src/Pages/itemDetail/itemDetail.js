@@ -10,7 +10,7 @@ const ItemDetail = () => {
   const { itemId } = useParams();
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch(`https://stark-sea-67117.herokuapp.com/item/${itemId}`)
+    fetch(`http://localhost:5000/item/${itemId}`)
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, [itemId]);
@@ -31,7 +31,7 @@ const ItemDetail = () => {
 
     // send data to the server
 
-    const url = `https://stark-sea-67117.herokuapp.com/item/${itemId}`;
+    const url = `http://localhost:5000/item/${itemId}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -54,7 +54,7 @@ const ItemDetail = () => {
     newItem.quantity = newItem.quantity - 1;
     console.log(newItem);
     setItems(newItem);
-    const url = `https://stark-sea-67117.herokuapp.com/item/${itemId}`;
+    const url = `http://localhost:5000/item/${itemId}`;
     fetch(url, {
       method: "PUT",
       headers: {

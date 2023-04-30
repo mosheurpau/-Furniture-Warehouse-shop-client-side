@@ -15,7 +15,7 @@ const AddItem = () => {
 
   const onSubmit = (data) => {
     data.email = user.email;
-    const url = `https://stark-sea-67117.herokuapp.com/item`;
+    const url = `http://localhost:5000/item`;
     fetch(url, {
       method: "POST",
       headers: {
