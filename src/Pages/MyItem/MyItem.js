@@ -10,7 +10,7 @@ const MyItem = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/itemAll/${id}`;
+      const url = `https://furniture-warehouse-shop-server-side.onrender.com/itemAll/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -26,7 +26,9 @@ const MyItem = () => {
   const [user] = useAuthState(auth);
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/items/${user.email}`)
+    fetch(
+      `https://furniture-warehouse-shop-server-side.onrender.com/items/${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, [user]);

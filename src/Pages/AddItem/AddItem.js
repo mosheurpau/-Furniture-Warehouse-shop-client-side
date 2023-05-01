@@ -15,7 +15,7 @@ const AddItem = () => {
 
   const onSubmit = (data) => {
     data.email = user.email;
-    const url = `http://localhost:5000/item`;
+    const url = `https://furniture-warehouse-shop-server-side.onrender.com/item`;
     fetch(url, {
       method: "POST",
       headers: {

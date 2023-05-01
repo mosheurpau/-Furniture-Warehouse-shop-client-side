@@ -10,7 +10,7 @@ import "./Items.css";
 const Items = () => {
   const [items, setItems, isLoading] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/item")
+    fetch("https://furniture-warehouse-shop-server-side.onrender.com/item")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);

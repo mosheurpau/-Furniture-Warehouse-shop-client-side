@@ -6,7 +6,7 @@ import Item from "../Item/Item";
 const Inventory = () => {
   const [items, setItems, isLoading] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/itemAll")
+    fetch("https://furniture-warehouse-shop-server-side.onrender.com/itemAll")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);

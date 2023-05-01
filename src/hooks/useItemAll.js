@@ -5,7 +5,7 @@ const useItemAll = () => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/itemAll")
+    fetch("https://furniture-warehouse-shop-server-side.onrender.com/itemAll")
       .then((res) => res.json())
       .then((data) => setItems(data));
     setLoading(false);

@@ -12,7 +12,7 @@ const ManageItems = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/itemAll/${id}`;
+      const url = `https://furniture-warehouse-shop-server-side.onrender.com/itemAll/${id}`;
       fetch(url, {
         method: "DELETE",
       })
