@@ -45,13 +45,13 @@ const PopularBrand = () => {
     },
   ];
   return (
-    <Container fluid="md" className=" mt-5">
-      <Row className="justify-content-md-center">
+    <div className="bg-light mb-5 mt-5">
+      <Row className="justify-content-md-center pt-5">
         <Col lg="8">
-          <h1 className="text-center mb-3">Popular brand</h1>
+          <h1 className="text-center mb-3 pb-3">Popular brand</h1>
         </Col>
       </Row>
-      <Row className="justify-content-md-center">
+      <Row className="justify-content-md-center pb-5">
         {allBrand.map((brand) => (
           <Col
             md={6}
@@ -67,7 +67,7 @@ const PopularBrand = () => {
           </Col>
         ))}
       </Row>
-    </Container>
+    </div>
   );
 };
 
