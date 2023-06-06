@@ -57,9 +57,10 @@ const PopularBrand = () => {
             md={6}
             lg={3}
             style={{
-              padding: "20px",
+              paddingTop: "5px",
+              paddingBottom: "5px",
               boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-              margin: "10px",
+              margin: "5px",
             }}
           >
             <img src={brand.img} width={200} height={70} alt="" />
