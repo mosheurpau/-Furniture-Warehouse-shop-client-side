@@ -90,7 +90,7 @@ const NewArivalItems = () => {
               slideShadows: true,
             }}
             autoplay={{
-              delay: 2000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             pagination={true}
@@ -101,13 +101,13 @@ const NewArivalItems = () => {
               <SwiperSlide>
                 <div>
                   <figure>
-                    <img src={newItem.img} height={300} alt="items" />
+                    <img src={newItem.img} height={150} alt="items" />
                   </figure>
                   <div className="text-center">
                     <h5>{newItem.name}</h5>
-                    <h5 style={{ color: "#EB7700", paddingBottom: "40px" }}>
+                    <p style={{ color: "#EB7700", paddingBottom: "40px" }}>
                       $ {newItem.price}
-                    </h5>
+                    </p>
                   </div>
                 </div>
               </SwiperSlide>

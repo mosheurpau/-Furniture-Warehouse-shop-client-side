@@ -53,17 +53,18 @@ const PopularBrand = () => {
       </Row>
       <Row className="justify-content-md-center pb-5">
         {allBrand.map((brand) => (
-          <Col
-            md={6}
-            lg={3}
-            style={{
-              paddingTop: "5px",
-              paddingBottom: "5px",
-              boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-              margin: "5px",
-            }}
-          >
-            <img src={brand.img} width={200} height={70} alt="" />
+          <Col md={6} lg={3}>
+            <div
+              className="my-2"
+              style={{
+                paddingTop: "10px",
+                paddingBottom: "10px",
+
+                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+              }}
+            >
+              <img src={brand.img} width={250} height={70} alt="" />
+            </div>
           </Col>
         ))}
       </Row>

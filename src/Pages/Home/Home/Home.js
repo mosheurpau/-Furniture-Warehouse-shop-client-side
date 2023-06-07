@@ -7,6 +7,7 @@ import PopularBrand from "../PopularBrand/PopularBrand";
 import ItemInfo from "../ItemInfo/ItemInfo";
 import NewArivalItems from "../NewArivalItems/NewArivalItems";
 import BestSale from "../BestSale/BestSale";
+import Contact from "../Contact/Contact";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <BestSale></BestSale>
       <NewArivalItems></NewArivalItems>
       <PopularBrand></PopularBrand>
+      <Contact></Contact>
       <News></News>
     </div>
   );

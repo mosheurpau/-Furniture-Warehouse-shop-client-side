@@ -25,8 +25,9 @@ const Footer = () => {
               />
             </div>
             <h5 className="text-center ms-2 my-3 text-black">
-              &copy; {new Date().getFullYear()} Furniture Warehouse. All right
-              reserved.
+              &copy; {new Date().getFullYear()}{" "}
+              <span style={{ color: "#EB7700" }}>Furniture</span> Warehouse. All
+              right reserved.
             </h5>
           </Col>
 

@@ -1,0 +1,22 @@
+.contact-title {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.contact-img img {
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+.contact-img img:hover {
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-title {
+    font-size: 40px;
+    font-weight: 550;
+  }
+  .sub-title {
+    font-size: medium;
+  }
+}
