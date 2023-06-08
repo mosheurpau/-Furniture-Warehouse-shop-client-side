@@ -1,12 +1,16 @@
-import React from "react";
-import { Container, Table } from "react-bootstrap";
+import React, { useState } from "react";
+import { Alert, Button, Container, Table } from "react-bootstrap";
 import useItemAll from "../../hooks/useItemAll";
 import "./ManageItems.css";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import Loading from "../Shared/Loading/Loading";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+
 const ManageItems = () => {
+  const [user] = useAuthState(auth);
   const [items, setItems, isLoading] = useItemAll();
 
   const handleDelete = (id) => {
@@ -23,6 +27,12 @@ const ManageItems = () => {
           setItems(remaining);
         });
     }
+  };
+
+  const handleNoDelete = () => {
+    alert(
+      "You can not delete other user item. You can only delete your item that you add"
+    );
   };
 
   const navigate = useNavigate();
@@ -65,12 +75,21 @@ const ManageItems = () => {
                   </button>
                 </td>
                 <td>
-                  <button
-                    className="delete-btn"
-                    onClick={() => handleDelete(item._id)}
-                  >
-                    <FontAwesomeIcon className="delete-icon" icon={faTrash} />
-                  </button>
+                  {user.email === item.email ? (
+                    <button
+                      className="delete-btn"
+                      onClick={() => handleDelete(item._id)}
+                    >
+                      <FontAwesomeIcon className="delete-icon" icon={faTrash} />
+                    </button>
+                  ) : (
+                    <button
+                      className="delete-btn"
+                      onClick={() => handleNoDelete()}
+                    >
+                      NO
+                    </button>
+                  )}
                 </td>
               </tr>
             ))}
