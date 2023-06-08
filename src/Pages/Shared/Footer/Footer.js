@@ -12,7 +12,7 @@ import {
 const Footer = () => {
   return (
     <footer>
-      <Container fluid className="bg-light pt-3">
+      <Container fluid className="bg-light pt-5">
         <Row className="justify-content-md-center">
           <Col xs="12" lg="5" className="mt-3 footer-title">
             <div className="text-center">

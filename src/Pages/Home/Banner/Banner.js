@@ -1,6 +1,8 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./Banner.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Banner = () => {
   return (
@@ -16,7 +18,10 @@ const Banner = () => {
               at porttitor eros leo ac ex. Nunc molestie turpis varius purus
               accumsan maximus. Nam ut libero aliquet.
             </h5>
-            <button className="banner-btn">Shop Collection →</button>
+            <button className="banner-btn">
+              Shop Collection{" "}
+              <FontAwesomeIcon className="" icon={faArrowRight} />
+            </button>
           </Col>
           <Col md={6} className="my-auto text-center">
             <img

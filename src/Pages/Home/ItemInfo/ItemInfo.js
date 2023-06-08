@@ -25,8 +25,8 @@ const ItemInfo = () => {
           <Col lg="4">
             <Row className="m-2 border-4 bg-light ps-3">
               <Col className="my-auto text-start">
-                <p style={{ color: "#D1BC92" }}>NEW ARRIVALS</p>
-                <h5 className="fw-bold pb-2">WOODEN SHOP NOW</h5>
+                <p style={{ color: "#D1BC92" }}>DISSCOUNT</p>
+                <h5 className="fw-bold pb-2">TABLE DISK</h5>
                 <a className="text-decoration-none text-black" href="">
                   VIEW COLLECTION
                 </a>
@@ -39,8 +39,8 @@ const ItemInfo = () => {
           <Col lg="4">
             <Row className="m-2 border-4 bg-light ps-3">
               <Col className="my-auto text-start">
-                <p style={{ color: "#D1BC92" }}>NEW ARRIVALS</p>
-                <h5 className="fw-bold pb-2">WOODEN SHOP NOW</h5>
+                <p style={{ color: "#D1BC92" }}>SALE</p>
+                <h5 className="fw-bold pb-2">TABLE LIT</h5>
                 <a className="text-decoration-none text-black" href="">
                   VIEW COLLECTION
                 </a>
