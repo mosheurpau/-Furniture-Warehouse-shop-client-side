@@ -1,0 +1,99 @@
+[
+    {
+      "product_category": "Living room furniture",
+      "sales": 1000,
+      "month": "January",
+      "revenue": 10000,
+      "investment": 5000,
+      "available_quantity": 500
+    },
+    {
+      "product_category": "Dining room furniture",
+      "sales": 500,
+      "month": "February",
+      "revenue": 5000,
+      "investment": 2500,
+      "available_quantity": 250
+    },
+    {
+      "product_category": "Bedroom furniture",
+      "sales": 200,
+      "month": "March",
+      "revenue": 2000,
+      "investment": 1000,
+      "available_quantity": 100
+    },
+    {
+      "product_category": "Office furniture",
+      "sales": 400,
+      "month": "April",
+      "revenue": 10000,
+      "investment": 5000,
+      "available_quantity": 50
+    },
+    {
+      "product_category": "Outdoor furniture",
+      "sales": 500,
+      "month": "May",
+      "revenue": 5000,
+      "investment": 2500,
+      "available_quantity": 25
+    },
+    {
+      "product_category": "Kids' furniture",
+      "sales": 250,
+      "month": "June",
+      "revenue": 2500,
+      "investment": 1250,
+      "available_quantity": 12
+    },
+    {
+      "product_category": "Living room furniture",
+      "sales": 120,
+      "month": "July",
+      "revenue": 12000,
+      "investment": 6000,
+      "available_quantity": 400
+    },
+    {
+      "product_category": "Dining room furniture",
+      "sales": 900,
+      "month": "August",
+      "revenue": 6000,
+      "investment": 3000,
+      "available_quantity": 300
+    },
+    {
+      "product_category": "Bedroom furniture",
+      "sales": 300,
+      "month": "September",
+      "revenue": 3000,
+      "investment": 1500,
+      "available_quantity": 150
+    },
+    {
+      "product_category": "Office furniture",
+      "sales": 150,
+      "month": "October",
+      "revenue": 15000,
+      "investment": 7500,
+      "available_quantity": 75
+    },
+    {
+      "product_category": "Outdoor furniture",
+      "sales": 375,
+      "month": "November",
+      "revenue": 7500,
+      "investment": 3750,
+      "available_quantity": 37
+    },
+    {
+      "product_category": "Kids' furniture",
+      "sales": 637,
+      "month": "December",
+      "revenue": 3700,
+      "investment": 1850,
+      "available_quantity": 18
+    }
+  ]
+  
