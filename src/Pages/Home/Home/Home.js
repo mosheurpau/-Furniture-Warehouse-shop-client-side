@@ -8,6 +8,7 @@ import ItemInfo from "../ItemInfo/ItemInfo";
 import NewArivalItems from "../NewArivalItems/NewArivalItems";
 import BestSale from "../BestSale/BestSale";
 import Contact from "../Contact/Contact";
+import VideoAboutUs from "../VideoAboutUs/VideoAboutUs";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Category></Category>
       <BestSale></BestSale>
       <NewArivalItems></NewArivalItems>
+      <VideoAboutUs></VideoAboutUs>
       <PopularBrand></PopularBrand>
       <Contact></Contact>
       <News></News>

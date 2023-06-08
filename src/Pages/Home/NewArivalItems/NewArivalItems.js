@@ -20,6 +20,7 @@ import new7 from "../../../images/new7.jpg";
 import new8 from "../../../images/new8.jpg";
 
 import React from "react";
+import { Container } from "react-bootstrap";
 
 const NewArivalItems = () => {
   const newItems = [
@@ -73,7 +74,7 @@ const NewArivalItems = () => {
     },
   ];
   return (
-    <div>
+    <Container fluid="md">
       <div className="pb-28">
         <h2 className="py-5">New Arrival</h2>
         <div>
@@ -115,7 +116,7 @@ const NewArivalItems = () => {
           </Swiper>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

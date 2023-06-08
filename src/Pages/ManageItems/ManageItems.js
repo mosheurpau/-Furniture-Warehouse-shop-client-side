@@ -50,9 +50,9 @@ const ManageItems = () => {
             </tr>
           </thead>
           <tbody>
-            {items.map((item) => (
+            {items.map((item, index) => (
               <tr key={item._id}>
-                <td>...{item._id.slice(20, 30)}</td>
+                <td>{index + 1}</td>
                 <td>{item.name}</td>
                 <td> {item.price}</td>
                 <td> {item.quantity}</td>

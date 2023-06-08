@@ -17,30 +17,33 @@ const Items = () => {
 
   if (isLoading) {
     return <Loading></Loading>;
+  } else {
+    return (
+      <Container fluid="md">
+        <Row className="justify-content-md-center">
+          <Col lg="8">
+            <h1 className="text-center mb-5">Furniture Items</h1>
+          </Col>
+        </Row>
+        <Row className="justify-content-md-center">
+          {items.map((item) => (
+            <Item key={item._id} item={item}></Item>
+          ))}
+        </Row>
+        <div className="mb-5">
+          <button
+            className="all-item-btn mt-5"
+            style={{ borderRadius: "45px" }}
+          >
+            <Link className="all-item" to="/inventory">
+              Manage All Items{" "}
+              <FontAwesomeIcon className="" icon={faArrowRight} />
+            </Link>
+          </button>
+        </div>
+      </Container>
+    );
   }
-
-  return (
-    <Container fluid="md">
-      <Row className="justify-content-md-center">
-        <Col lg="8">
-          <h1 className="text-center mb-5">Furniture Items</h1>
-        </Col>
-      </Row>
-      <Row className="justify-content-md-center">
-        {items.map((item) => (
-          <Item key={item._id} item={item}></Item>
-        ))}
-      </Row>
-      <div className="mb-5">
-        <button className="all-item-btn mt-5">
-          <Link className="all-item" to="/inventory">
-            Manage All Items{" "}
-            <FontAwesomeIcon className="" icon={faArrowRight} />
-          </Link>
-        </button>
-      </div>
-    </Container>
-  );
 };
 
 export default Items;
