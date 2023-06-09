@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Alert, Button, Container, Table } from "react-bootstrap";
+import { Button, Container, Form, InputGroup, Table } from "react-bootstrap";
 import useItemAll from "../../hooks/useItemAll";
 import "./ManageItems.css";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
@@ -48,6 +48,18 @@ const ManageItems = () => {
     <Container>
       <div className="w-100 mx-auto">
         <h2 className="my-5">Manage All Items</h2>
+
+        <InputGroup className="mb-3">
+          <Form.Control
+            placeholder="Search the item you want"
+            aria-label="Search the item you want"
+            aria-describedby="basic-addon2"
+          />
+          <Button variant="outline-secondary" id="button-addon2">
+            Search
+          </Button>
+        </InputGroup>
+
         <Table striped bordered responsive hover variant="light">
           <thead>
             <tr>
