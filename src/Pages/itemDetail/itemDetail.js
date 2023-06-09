@@ -20,16 +20,19 @@ const ItemDetail = () => {
   const { name, img, description, price, quantity, supplier } = items;
 
   let priviourQuan = parseInt(quantity);
+
   // console.log(typeof priviourQuan);
 
+  // const handleUpdateQuantity = (event) => {
   const handleUpdateQuantity = (event) => {
     event.preventDefault();
-
+    const updateItem = { ...items };
     const newQuantity = event.target.quantity.value;
 
-    const quantity = priviourQuan + parseInt(newQuantity);
+    updateItem.quantity = parseInt(updateItem.quantity) + parseInt(newQuantity);
+    console.log(updateItem);
 
-    const updatedQuantity = { quantity };
+    setItems(updateItem);
 
     // send data to the server
 
@@ -39,15 +42,13 @@ const ItemDetail = () => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(updatedQuantity),
+      body: JSON.stringify(updateItem),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log("success", data);
         toast("Quantity added successfully!!!");
         event.target.reset();
-        let from = location.state?.from?.pathname || "/manage";
-        navigate(from, { replace: true });
       });
   };
 
@@ -62,12 +63,12 @@ const ItemDetail = () => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(items),
+      body: JSON.stringify(newItem),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log("success", data);
-        alert("Task successfully!!!");
+        toast("Quantity 1 decreases and Delivered  successfully!!!");
       });
   };
 

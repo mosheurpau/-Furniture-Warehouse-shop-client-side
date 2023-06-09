@@ -1,7 +1,7 @@
 [
     {
       "product_category": "Living room furniture",
-      "sales": 1000,
+      "sales": 10000,
       "month": "January",
       "revenue": 10000,
       "investment": 5000,
@@ -17,7 +17,7 @@
     },
     {
       "product_category": "Bedroom furniture",
-      "sales": 200,
+      "sales": 5000,
       "month": "March",
       "revenue": 2000,
       "investment": 1000,
@@ -41,7 +41,7 @@
     },
     {
       "product_category": "Kids' furniture",
-      "sales": 250,
+      "sales": 7050,
       "month": "June",
       "revenue": 2500,
       "investment": 1250,
@@ -49,7 +49,7 @@
     },
     {
       "product_category": "Living room furniture",
-      "sales": 120,
+      "sales": 1200,
       "month": "July",
       "revenue": 12000,
       "investment": 6000,
@@ -61,11 +61,11 @@
       "month": "August",
       "revenue": 6000,
       "investment": 3000,
-      "available_quantity": 300
+      "available_quantity": 200
     },
     {
       "product_category": "Bedroom furniture",
-      "sales": 300,
+      "sales": 5500,
       "month": "September",
       "revenue": 3000,
       "investment": 1500,
@@ -73,7 +73,7 @@
     },
     {
       "product_category": "Office furniture",
-      "sales": 150,
+      "sales": 7050,
       "month": "October",
       "revenue": 15000,
       "investment": 7500,
@@ -81,7 +81,7 @@
     },
     {
       "product_category": "Outdoor furniture",
-      "sales": 375,
+      "sales": 3075,
       "month": "November",
       "revenue": 7500,
       "investment": 3750,
@@ -89,7 +89,7 @@
     },
     {
       "product_category": "Kids' furniture",
-      "sales": 637,
+      "sales": 6037,
       "month": "December",
       "revenue": 3700,
       "investment": 1850,

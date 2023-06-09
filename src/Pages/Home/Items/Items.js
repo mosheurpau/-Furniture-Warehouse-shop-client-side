@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Loading from "../../Shared/Loading/Loading";
-import Item from "../Item/Item";
 import "./Items.css";
+import Item from "../Item/Item";
 
 const Items = () => {
   const [items, setItems, isLoading] = useState([]);

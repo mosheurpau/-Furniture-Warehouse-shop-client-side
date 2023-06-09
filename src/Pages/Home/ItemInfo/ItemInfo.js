@@ -17,7 +17,7 @@ const ItemInfo = () => {
                   VIEW COLLECTION
                 </a>
               </Col>
-              <Col className="my-auto text-center">
+              <Col className="my-auto text-center img-effect">
                 <img className="img-fluid" src={dissount} alt="" />
               </Col>
             </Row>
@@ -31,7 +31,7 @@ const ItemInfo = () => {
                   VIEW COLLECTION
                 </a>
               </Col>
-              <Col className="my-auto text-center">
+              <Col className="my-auto text-center img-effect">
                 <img className="img-fluid" src={sale} alt="" />
               </Col>
             </Row>
@@ -45,7 +45,7 @@ const ItemInfo = () => {
                   VIEW COLLECTION
                 </a>
               </Col>
-              <Col className="my-auto text-center">
+              <Col className="my-auto text-center img-effect">
                 <img className="img-fluid" src={wooden} alt="" />
               </Col>
             </Row>

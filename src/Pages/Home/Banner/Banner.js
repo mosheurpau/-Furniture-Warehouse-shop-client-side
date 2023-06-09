@@ -23,7 +23,7 @@ const Banner = () => {
               <FontAwesomeIcon className="" icon={faArrowRight} />
             </button>
           </Col>
-          <Col md={6} className="my-auto text-center">
+          <Col md={6} className="my-auto text-center img-effect">
             <img
               className="img-fluid"
               src="https://i.ibb.co/xmk8K1R/banner-furniture.png"

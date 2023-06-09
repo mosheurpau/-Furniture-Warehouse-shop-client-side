@@ -55,7 +55,7 @@ const PopularBrand = () => {
         {allBrand.map((brand) => (
           <Col md={6} lg={3}>
             <div
-              className="my-2"
+              className="my-2 img-effect"
               style={{
                 paddingTop: "10px",
                 paddingBottom: "10px",

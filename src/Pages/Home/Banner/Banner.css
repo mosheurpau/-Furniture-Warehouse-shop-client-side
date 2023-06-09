@@ -29,6 +29,16 @@
   background-color: black;
   color: white;
 }
+
+.img-effect img {
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+.img-effect img:hover {
+  opacity: 0.9;
+  transform: scale(1.08);
+}
+
 @media only screen and (max-width: 600px) {
   .banner-style {
     padding: 10px 0 5px 0;

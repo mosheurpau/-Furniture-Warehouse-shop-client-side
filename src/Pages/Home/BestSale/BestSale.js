@@ -37,7 +37,7 @@ const BestSale = () => {
       <Container fluid="md">
         <Row className="m-2 border-4 ps-3">
           {sales.map((sale) => (
-            <Col lg="3">
+            <Col lg="3" className="img-effect">
               <img className="img-fluid" src={sale.img} alt="" />
               <div className="text-center pt-3">
                 <h5>{sale.name}</h5>

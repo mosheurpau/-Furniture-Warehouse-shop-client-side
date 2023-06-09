@@ -16,8 +16,8 @@ const News = () => {
             </p>
           </Col>
         </Row>
-        <Row className="justify-content-md-center mb-5 pb-5">
-          <Col md={6} lg={4}>
+        <Row className="justify-content-md-center mb-5 pb-5 ">
+          <Col md={6} lg={4} className="img-effect">
             <img
               width={300}
               height={300}
@@ -43,7 +43,7 @@ const News = () => {
               </a>
             </p>
           </Col>
-          <Col md={6} lg={4}>
+          <Col md={6} lg={4} className="img-effect">
             <img
               width={300}
               height={300}
@@ -69,7 +69,7 @@ const News = () => {
               </a>
             </p>
           </Col>
-          <Col md={6} lg={4}>
+          <Col md={6} lg={4} className="img-effect">
             <img
               width={300}
               height={300}
