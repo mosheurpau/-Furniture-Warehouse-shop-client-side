@@ -1,15 +1,10 @@
-// import React from "react";
-// Import Swiper React components
+import React from "react";
+import { Container } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
-// import required modules
 import { Autoplay, EffectCoverflow, Pagination } from "swiper";
-
 import new1 from "../../../images/new1.jpg";
 import new2 from "../../../images/new2.jpg";
 import new3 from "../../../images/new3.jpg";
@@ -18,9 +13,6 @@ import new5 from "../../../images/new5.jpg";
 import new6 from "../../../images/new6.jpg";
 import new7 from "../../../images/new7.jpg";
 import new8 from "../../../images/new8.jpg";
-
-import React from "react";
-import { Container } from "react-bootstrap";
 
 const NewArivalItems = () => {
   const newItems = [
@@ -73,6 +65,10 @@ const NewArivalItems = () => {
       price: "709",
     },
   ];
+
+  // Determine number of slides per view based on screen width
+  const slidesPerView = window.innerWidth > 768 ? 3 : 1;
+
   return (
     <Container fluid="md">
       <div className="pb-28">
@@ -82,7 +78,7 @@ const NewArivalItems = () => {
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
-            slidesPerView={3}
+            slidesPerView={slidesPerView}
             coverflowEffect={{
               rotate: 50,
               stretch: 0,
@@ -99,7 +95,7 @@ const NewArivalItems = () => {
             className="mySwiper"
           >
             {newItems.map((newItem) => (
-              <SwiperSlide>
+              <SwiperSlide key={newItem._id}>
                 <div>
                   <figure>
                     <img src={newItem.img} height={150} alt="items" />

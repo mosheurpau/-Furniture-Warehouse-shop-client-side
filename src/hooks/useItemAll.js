@@ -7,8 +7,10 @@ const useItemAll = () => {
   useEffect(() => {
     fetch("https://furniture-warehouse-shop-server-side.onrender.com/itemAll")
       .then((res) => res.json())
-      .then((data) => setItems(data));
-    setLoading(false);
+      .then((data) => {
+        setItems(data);
+        setLoading(false);
+      });
   }, []);
   return [items, setItems, isLoading];
 };
